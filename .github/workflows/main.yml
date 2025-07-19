@@ -1,5 +1,6 @@
 name: example
 on:
+  push:
   schedule:
     - cron: '*/1 * * * *' # Every 5 minutes
 jobs:
@@ -10,7 +11,7 @@ jobs:
       - name: Check Tickets
         uses: mooyoul/melon-ticket-actions@v1.1.0
         with:
-          product-id: 204755
+          product-id: 211666
           schedule-id: 100001
           seat-id: 1_0
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
